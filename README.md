@@ -7,5 +7,5 @@ Correspondance: mbenitez@iecologa.unam.mx and aescalante@iecologia.unam.mx
 
 All the analysis were perfomed and tested in Ubuntu 16.04.1 LTS 64-bit. 
 All scripts were run using Perl v5.22.1 or R v3.2.3.
-In particular, the functionsincluded in the R-package BoolNet v2.1.3 are the basis of many of the analysis employed here.
+In particular, the functions included in the R-package BoolNet v2.1.3 are the basis of many of the analysis employed here.
 
