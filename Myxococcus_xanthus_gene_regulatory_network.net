@@ -1,0 +1,52 @@
+# This file contains a Boolean network model aimed to represent the gene regulatory network relying cell-fate determination in Myxococcus xanthus.
+# Developed by: Juan A. Arias Del Angel (PhD student - Universidad Nacional Autónoma de México)
+# Advisor: Mariana Benítez (PhD - Universidad Nacional Autónoma de México)
+# For citation purposes and more information:
+# Arias Del Angel JA, Martínez-Castilla LP, Escalante Ae & Benítez M. (In Prep). Cell-fate determination in Myxococcus xanthus development: network dynamics and novel predictions. Development, Growth and Differentiation.
+# NOTE: File format according to R-package BoolNet v2.1.3 specifications.
+
+###############################################################################################################
+######################################## Network Model ########################################################
+###############################################################################################################
+
+targets, factors
+######################################
+###     Environmental stimulus     ###
+######################################
+Nut, Nut
+RelA, !Nut
+######################################
+###          A-signalling          ###
+######################################
+Asg, !Nut
+AsgAB, RelA 
+AsgE, !Nut & Nla6
+######################################
+###          C-signalling          ###
+######################################
+Nla4, RelA
+Nla18, RelA
+Nla6, !MazF & ((Nla4 & Nla18) 
+Nla28, Nla6 & Asg
+ActAB, Nla28 | (ActAB & FruA))
+CsgA, ActAB
+######################################
+###          STPK Cascade          ###
+######################################
+PktD9, !RelA
+PEP, !Nut
+PktD1, !PEP
+MkapB, PktD1
+PktA4, MkapB
+MkapA, PktD9 | PktA2 | PktA4
+PktA2, DevTRS
+PktC2, MkapA
+PskA5, PktC2
+######################################
+###        Cell-fate markers       ###
+######################################
+MrpC2, Asg & !PskA5 & !MazF
+FruA, CsgA & (MrpC2 | (FruA & DevTRS))
+DevTRS, (MrpC2 | FruA) 
+MazF, !Nut & !DevTRS & (MazF | MrpC2) 
+
