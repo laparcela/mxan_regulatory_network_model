@@ -1,8 +1,8 @@
 # This file contains a Boolean network model aimed to represent the gene regulatory network relying cell-fate determination in Myxococcus xanthus.
 # Developed by: Juan A. Arias Del Angel (PhD student - Universidad Nacional Autónoma de México)
 # Advisor: Mariana Benítez (PhD - Universidad Nacional Autónoma de México)
-# For citation purposes and more information:
-# Arias Del Angel JA, Martínez-Castilla LP, Escalante Ae & Benítez M. (In Prep). Cell-fate determination in Myxococcus xanthus development: network dynamics and novel predictions. Development, Growth and Differentiation.
+# For citation purposes and additional information:
+# Arias Del Angel JA, Martínez-Castilla LP, Escalante AE & Benítez M. (In Prep). Cell-fate determination in Myxococcus xanthus development: network dynamics and novel predictions. Development, Growth and Differentiation.
 # NOTE: File format according to R-package BoolNet v2.1.3 specifications.
 
 ###############################################################################################################
