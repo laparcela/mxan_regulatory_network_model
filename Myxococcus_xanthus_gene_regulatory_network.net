@@ -33,7 +33,7 @@ CsgA, ActAB
 ######################################
 ###          STPK Cascade          ###
 ######################################
-PktD9, !RelA
+PktD9, Nut
 PEP, !Nut
 PktD1, !PEP
 MkapB, PktD1
