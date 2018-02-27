@@ -1,0 +1,26 @@
+targets, factors
+Nut, Nut
+RelA, !Nut
+Nla4, RelA
+Nla18, RelA
+Nla6, !MazF & ((Nla4 & Nla18) | (Nla6 & FruA))
+Nla28, Nla6 & Asg
+ActAB, Nla6
+Csg, ActAB
+Asg, !Nut
+AsgAB, RelA 
+AsgE, !Nut & Nla6
+PktD9, Nut
+PEP, !Nut
+PktD1, !PEP
+MkapB, PktD1
+PktA4, MkapB
+MkapA, PktD9 | PktA2 | PktA4
+PktA2, DevTRS
+PktC2, MkapA
+PskA5, PktC2
+MrpC2, Asg & !PskA5 & !MazF
+FruA, Nla6 & (MrpC2 | (FruA & DevTRS))   # Regla buena
+DevTRS, (MrpC2 | FruA) 
+MazF, !Nut & !DevTRS & (MazF | MrpC2) 
+
